@@ -24,8 +24,10 @@ namespace EmailDatabase.Models
             }
             if(await userManager.FindByNameAsync(username) == null)
             {
-                IdentityUser identityUser = new IdentityUser();
-                identityUser.UserName = username;
+                IdentityUser identityUser = new()
+                {
+                    UserName = username
+                };
                 IdentityResult identityResult = await userManager.CreateAsync(identityUser, password);
                 if (identityResult.Succeeded)
                 {

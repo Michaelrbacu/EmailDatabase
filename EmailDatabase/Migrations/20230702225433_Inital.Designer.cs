@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmailDatabase.Migrations
 {
     [DbContext(typeof(EmailContext))]
-    [Migration("20230430025506_Inital")]
+    [Migration("20230702225433_Inital")]
     partial class Inital
     {
         /// <inheritdoc />
